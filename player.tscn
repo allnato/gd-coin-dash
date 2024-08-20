@@ -82,7 +82,8 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e3xpv")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.185238
+frame = 2
+frame_progress = 0.0051159
 offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
