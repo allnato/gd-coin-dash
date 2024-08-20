@@ -57,16 +57,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhhgu"]
 radius = 20.025
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["coins"]]
 script = ExtResource("1_8ynfp")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["coins"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_utgd8")
 animation = &"coin_shine"
-frame = 5
-frame_progress = 0.188636
+autoplay = "coin_shine"
+frame = 3
+frame_progress = 0.633826
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mhhgu")
