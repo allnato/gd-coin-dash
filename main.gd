@@ -42,10 +42,14 @@ func spawn_coins():
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
 	
+	# Reset Player Position
+	$Player.position = screensize/2
 	# Show Level Message
 	$HUD.show_game_level(level)
-	# Sound
+	# Play Level Sound
 	$LevelSound.play()
+	$LevelNameTimer.start()
+	await $LevelNameTimer.timeout
 
 
 func _on_game_timer_timeout() -> void:

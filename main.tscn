@@ -26,6 +26,8 @@ stretch_mode = 1
 
 [node name="GameTimer" type="Timer" parent="."]
 
+[node name="LevelNameTimer" type="Timer" parent="."]
+
 [node name="HUD" parent="." instance=ExtResource("5_amaby")]
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
