@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://2es5r0qb648v"]
+[gd_scene load_steps=12 format=3 uid="uid://2es5r0qb648v"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_80j6s"]
 [ext_resource type="PackedScene" uid="uid://bxjksy0kiuaw1" path="res://player.tscn" id="1_dw3u3"]
 [ext_resource type="Texture2D" uid="uid://6ixshqtk2ep1" path="res://assets/grass.png" id="1_oui06"]
 [ext_resource type="PackedScene" uid="uid://b0uh2fqvwl2bn" path="res://coin.tscn" id="2_uve2q"]
 [ext_resource type="PackedScene" uid="uid://brt5wy1fkr3xi" path="res://powerup.tscn" id="3_4utf0"]
+[ext_resource type="PackedScene" uid="uid://c04d55sj08oq5" path="res://cactus.tscn" id="4_nxw6i"]
 [ext_resource type="PackedScene" uid="uid://cn0i5oise2qj0" path="res://hud.tscn" id="5_amaby"]
 [ext_resource type="AudioStream" uid="uid://bjmrrk77pt0qq" path="res://assets/audio/Coin.wav" id="6_fbrxk"]
 [ext_resource type="AudioStream" uid="uid://bargk63phvyaf" path="res://assets/audio/Level.wav" id="7_k30mr"]
@@ -15,6 +16,7 @@
 script = ExtResource("1_80j6s")
 coin_scene = ExtResource("2_uve2q")
 powerup_scene = ExtResource("3_4utf0")
+cactus_scene = ExtResource("4_nxw6i")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
