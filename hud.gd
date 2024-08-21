@@ -29,3 +29,8 @@ func show_game_over():
 	$StartButton.show()
 	$Message.text = "Coin Dash!"
 	$Message.show()
+	
+func show_game_level(game_level):
+	show_message(str("Level ", game_level))
+	await $Timer.timeout
+	$Message.hide()

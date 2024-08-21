@@ -35,12 +35,17 @@ func new_game():
 	$HUD.update_time(time_left)
 	
 func spawn_coins():
+	
 	for i in level + 4:
 		var c = coin_scene.instantiate()
 		add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
-		
+	
+	# Show Level Message
+	$HUD.show_game_level(level)
+	# Sound
+	$LevelSound.play()
 
 
 func _on_game_timer_timeout() -> void:
@@ -56,11 +61,13 @@ func _on_player_hurt() -> void:
 
 func _on_player_pickup() -> void:
 	score += 1
+	$CoinSound.play()
 	$HUD.update_score(score)
 	
 func game_over():
 	playing = false
 	$GameTimer.stop()
+	$EndSound.play()
 	get_tree().call_group("coins", "queue_free")
 	$HUD.show_game_over()
 	$Player.die()
