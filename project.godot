@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="Coin Dash"
-run/main_scene="res://player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=420
-window/size/viewport_height=720
-window/size/resizable=false
+window/size/viewport_width=160
+window/size/viewport_height=320
+window/size/mode=2
 window/stretch/mode="canvas_items"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
